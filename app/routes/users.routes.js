@@ -2,17 +2,17 @@ import { Router } from "express";
 import * as userController from "../controllers/users.controller";
 const router = Router();
 
-router.post(`/`, userController.createUser);
+router.post(`/user/`, userController.createUser);
 
-router.get(`/`, );
+router.get(`/user/`, userController.listUser);
 
-router.get(`/ping`, );
+router.get(`/user/ping`, userController.pingUser);
 
-router.get(`/:id`,);
+router.get(`/user/:id`,userController.findUser);
 
-router.put(`/:id`, );
+router.put(`/user/:id`, userController.updateUser);
 
-router.delete(`/:id`, );
+router.delete(`/user/:id`,userController.deleteUser);
 
 export default router;
 
